@@ -1218,7 +1218,7 @@ Feb-March, 2015<o:p></o:p></span></p>
 
 <h1><a name="_Toc414656852">Background</a></h1>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The goal of
+<p class=MsoNormal> The goal of
 this study was to determine whether the data collected by an accelerometer on
 the</span><span class=apple-converted-space><span style='font-size:14.0pt;
 line-height:115%;mso-bidi-font-family:Helvetica;color:#333333;background:white'>&nbsp;</span></span><span
@@ -1239,11 +1239,11 @@ href="http://groupware.les.inf.puc-rio.br/har">http://groupware.les.inf.puc-rio.
 
 <h1><o:p>&nbsp;</o:p></h1>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal> <o:p>&nbsp;</o:p></span></p>
 
 <h1><a name="_Toc414656853">Summary</a></h1>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The best
+<p class=MsoNormal> The best
 accuracy achieved as 99.8% with a data size of 6,851 random training rows. This run took 2,820 seconds of training
 time. After we settled at a fixed set of
 35 features, we increased the training set size from 100 (random) rows till
@@ -1253,7 +1253,7 @@ kept completely independent from the training set. All our runs with 737 or more
 scored the 20 test problems with 100% accuracy. This 737-point run took just about 180 seconds to finish learning</span>. The following figure displays how the
 accuracy and training time increased with the training size.<o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>It was not
+<p class=MsoNormal> It was not
 the goal of this experiment to beat any accuracy records. We wanted to draw
 some good conclusions about one important aspect of the problem and we chose
 training set size as the main aspect of our study. Generating an adequate model (details below)
@@ -1291,31 +1291,31 @@ style='font-size:14.0pt;line-height:115%;mso-no-proof:yes'><!--[if gte vml 1]><v
 src="Writeup_files/image002.jpg" v:shapes="_x0000_i1027"><![endif]></span><span
 style='font-size:14.0pt;line-height:115%'><o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal> <o:p>&nbsp;</o:p></span></p>
 
 <h1><a name="_Toc414656854">Details of the Machine Learning Algorithm</a></h1>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Our goal was
+<p class=MsoNormal> Our goal was
 to take a series of reasonable decisions as we go forward but be willing to retract
 those decisions if needed. Luckily we
 did not have to make many backtracking decisions. Our major decisions are described below:<o:p></o:p></span></p>
 
-<h2><a name="_Toc414656855"><span style='font-size:14.0pt;line-height:115%'>Choice
+<h2><a name="_Toc414656855"> Choice
 of the ML algorithm (Caret, Random Forest)</span></a><span style='font-size:
 14.0pt;line-height:115%'><o:p></o:p></span></h2>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Since it was
+<p class=MsoNormal> Since it was
 a classification problem involving 5 categories, a decision tree was a natural
 choice. We decided to use carets random
 forest method. An alternative (RPART) is inferior to random forest especially
 when problem complexity is not known in advance. We decided against any NN or SVM methods
 because they are less suitable for classification tasks.<o:p></o:p></span></p>
 
-<h2><a name="_Toc414656856"><span style='font-size:14.0pt;line-height:115%'>Data
+<h2><a name="_Toc414656856"> Data
 Cleaning and Feature-Reduction Steps</span></a><span style='font-size:14.0pt;
 line-height:115%'><o:p></o:p></span></h2>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>We followed
+<p class=MsoNormal> We followed
 several successive steps that made sense and did not have to backtrack. Here are the major decisions:<o:p></o:p></span></p>
 
 <p class=MsoListParagraphCxSpFirst style='text-indent:-.25in;mso-list:l0 level1 lfo1'><a
@@ -1390,7 +1390,7 @@ name="_Toc414656862"><![if !supportLists]><span style='font-size:14.0pt;
 line-height:115%;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'><span
 style='mso-list:Ignore'>6.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span class=Heading3Char> Experimental variable removal:</span></span></a><span
-class=Heading3Char><span style='font-size:14.0pt;line-height:115%'> </span></span><span style='font-size:14.0pt;
+class=Heading3Char>  </span></span><span style='font-size:14.0pt;
 line-height:115%'>Only using the training set data points we did a quick
 experiment of generating 10 different random forests with a ten small random
 training sets (300 rows each). We
@@ -1401,17 +1401,17 @@ class=GramE>finalModel</span></span> [</span>&quot;importance&quot;]
 forests. This step was also done only
 once. (46 columns reduced to 35)<o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Our main
+<p class=MsoNormal> Our main
 experiment used a data set with 35 columns.<o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal> <o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><a name="_Toc414656863"><span class=Heading2Char><span
 style='font-size:14.0pt;line-height:115%'>Cross-validation Issue</span></span></a><span
 style='mso-bookmark:_Toc414656863'></span><span style='font-size:14.0pt;
 line-height:115%'><o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>This data
+<p class=MsoNormal> This data
 set had enough data to finish the learning task without any severe rationing of
 data. So there was no need to utilize an
 extensively sophisticated CV technique. We, however, took extreme care that the test sets were completely
@@ -1420,7 +1420,7 @@ what was done:<o:p></o:p></span></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
 style='font-size:14.0pt;line-height:115%'>Test Set 1: Completely isolated 30%
-Test Subset</span></b><span style='font-size:14.0pt;line-height:115%'>:<span
+Test Subset</span></b>:<span
 style='mso-spacerun:yes'>   </span>A 30% random subset of the data was left out
 and was used only for testing. Every model
 generated was tested on this data set. This allowed us to compare different learning scenarios on exact same
@@ -1435,7 +1435,7 @@ used for training. But we also opportunistically
 used the remaining 70%-N points to formulate yet another test set. This latter set was also NOT used for
 training. <o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Due to ample
+<p class=MsoNormal> Due to ample
 availability of the data we never had to use methods like k-fold cross
 validation or leave-one-out. <o:p></o:p></span></p>
 
@@ -1447,10 +1447,10 @@ mso-bidi-font-weight:bold;mso-no-proof:yes'><!--[if gte vml 1]><v:shape id="Pict
 </v:shape><![endif]--><![if !vml]><img border=0 width=415 height=309
 src="Writeup_files/image004.jpg" v:shapes="Picture_x0020_4"><![endif]></span></h1>
 
-<h2><a name="_Toc414656864"><span style='font-size:14.0pt;line-height:115%'>Interpretations
-of results</span></a><span style='font-size:14.0pt;line-height:115%'><o:p></o:p></span></h2>
+<h2><a name="_Toc414656864"> Interpretations
+of results</span></a> <o:p></o:p></span></h2>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>We used our last
+<p class=MsoNormal> We used our last
 (and best) model for this analysis. Here
 are some pertinent details:<o:p></o:p></span></p>
 
@@ -1565,19 +1565,19 @@ are some pertinent details:<o:p></o:p></span></p>
  </tr>
 </table>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal> <o:p>&nbsp;</o:p></span></p>
 
-<h2><a name="_Toc414656865"><span style='font-size:14.0pt;line-height:115%'>Did
+<h2><a name="_Toc414656865"> Did
 Removal of Correlated Columns Help and By How Much?</span></a><span
 style='font-size:14.0pt;line-height:115%'><o:p></o:p></span></h2>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>We wanted to
+<p class=MsoNormal> We wanted to
 see how much did the removal of correlated columns help. The following graphs show the learning
 accuracy and training times as a result of training set size for the two
 cases. Removing the correlated variables
 improved the accuracy only marginally but improved the learning time quite significantly.<o:p></o:p></span></p>
 
-<p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
+<p class=MsoNormal> <o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%;mso-no-proof:
 yes'><!--[if gte vml 1]><v:shape id="Picture_x0020_7" o:spid="_x0000_i1025"
