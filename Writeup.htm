@@ -1250,7 +1250,7 @@ time. After we settled at a fixed set of
 over 6800 rows and measured the accuracy (using a different test set). Each run had 25% more rows than the previous
 run. In each run the test set(s) were
 kept completely independent from the training set. All our runs with 737 or more training points
-scored the 20 test problems with 100% accuracy. This 737-point run took just about 180 seconds to <span class=GramE>finish
+scored the 20 test problems with 100% accuracy. This 737-point run took just about 180 seconds to finish
 <span style='mso-spacerun:yes'> </span>learning</span>. The following figure displays how the
 accuracy and training time increased with the training size.<o:p></o:p></span></p>
 
@@ -1367,7 +1367,7 @@ style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp
 </span></span></span><![endif]><span class=Heading3Char> Correlation-based feature removal</span></span></a><span
 style='mso-bookmark:_Toc414656860'></span><span style='font-size:14.0pt;
 line-height:115%'>: After setting aside
-a test data set (discussed later), we performed a correlation experiment. If two variables had a <span class=GramE><i
+a test data set (discussed later), we performed a correlation experiment. If two variables had a  <i
 style='mso-bidi-font-style:normal'>abs(</i></span><i style='mso-bidi-font-style:
 normal'>correlation)</i> of 0.8 or more, we removed one of those randomly. This process continued in a transitive
 fashion (in a chain of correlated variables X, Y, Z… only Z might
@@ -1382,7 +1382,7 @@ style='mso-list:Ignore'>5.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp
 style='mso-bookmark:_Toc414656861'></span><span style='font-size:14.0pt;
 line-height:115%'> (<b style='mso-bidi-font-weight:normal'>tried but not used</b>): We did not want to use PCA unless absolutely necessary. But we used a novel approach to remove those
 variables that had smallest (absolute) slopes in various PCs. So if a variable had slopes (0.001, 0.007,
--0.001<span class=GramE>..)</span> in the PCs, it would be a candidate to be
+-0.001 ..)</span> in the PCs, it would be a candidate to be
 removed but a variable of slopes (50, 100, and -100) will not be. We did not pursue this path due to the risk
 involved. But a visual inspection showed
 the promise of this approach.<o:p></o:p></span></p>
@@ -1397,7 +1397,7 @@ line-height:115%'>Only using the training set data points we did a quick
 experiment of generating 10 different random forests with a ten small random
 training sets (300 rows each). We
 calculated the role played by each variable ($<span class=SpellE>fit$<span
-class=GramE>finalModel</span></span><span class=GramE>[</span>&quot;importance&quot;]
+class=GramE>finalModel</span></span> [</span>&quot;importance&quot;]
 ) in these random forests and the in-sample accuracy of the forest. We rejected
 25% of the variables that played least roles in these quick and dirty
 forests. This step was also done only
