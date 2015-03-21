@@ -1226,16 +1226,16 @@ style='font-size:14.0pt;line-height:115%;mso-bidi-font-family:Helvetica;
 color:#333333;background:white'>belt, forearm, arm, and dumbbell of </span><span
 style='font-size:14.0pt;line-height:115%'>a person involved in different physical
 exercises can be used to predict whether the exercise was done correctly or
-not.<span style='mso-spacerun:yes'>  </span>Six human subjects were asked to
+not. Six human subjects were asked to
 perform a physical exercise in one right way (A) and four wrong ways (B, C, D,
-and E).<span style='mso-spacerun:yes'>  </span>Accelerometer data was collected
-for each execution of the exercise.<span style='mso-spacerun:yes'>  </span>It
+and E). Accelerometer data was collected
+for each execution of the exercise. It
 was assumed that the participants were indeed able to do the exercise in one of
-these five ways when asked to do so.<span style='mso-spacerun:yes'>  </span>The
+these five ways when asked to do so. The
 categorization problem here required the classifier to learn to identify the
 way the exercise was done form the accelerometer data.<span
 style='mso-spacerun:yes'>  </span>The data and more details about it are
-available here:<span style='mso-spacerun:yes'>  </span><a
+available here: <a
 href="http://groupware.les.inf.puc-rio.br/har">http://groupware.les.inf.puc-rio.br/har</a>.<o:p></o:p></span></p>
 
 <h1><o:p>&nbsp;</o:p></h1>
@@ -1247,11 +1247,11 @@ href="http://groupware.les.inf.puc-rio.br/har">http://groupware.les.inf.puc-rio.
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>The best
 accuracy achieved as 99.8% with a data size of 6,851 random training rows.<span
 style='mso-spacerun:yes'>  </span>This run took 2,820 seconds of training
-time.<span style='mso-spacerun:yes'>  </span>After we settled at a fixed set of
+time. After we settled at a fixed set of
 35 features, we increased the training set size from 100 (random) rows till
 over 6800 rows and measured the accuracy (using a different test set).<span
 style='mso-spacerun:yes'>  </span>Each run had 25% more rows than the previous
-run.<span style='mso-spacerun:yes'>  </span>In each run the test set(s) were
+run. In each run the test set(s) were
 kept completely independent from the training set.<span
 style='mso-spacerun:yes'>  </span>All our runs with 737 or more training points
 scored the 20 test problems with 100% accuracy. This 737-point run took just about 180 seconds to <span class=GramE>finish
@@ -1264,7 +1264,7 @@ the goal of this experiment to beat any accuracy records. We wanted to draw
 some good conclusions about one important aspect of the problem and we chose
 training set size as the main aspect of our study.<span
 style='mso-spacerun:yes'>  </span>Generating an adequate model (details below)
-was a relatively easy process.<span style='mso-spacerun:yes'>  </span>We wanted
+was a relatively easy process. We wanted
 to discover the smallest training set that will give us an accuracy of over 99%.<span
 style='mso-spacerun:yes'>  </span>We hit that mark at training set size 2807.<br
 style='mso-special-character:line-break'>
@@ -1305,7 +1305,7 @@ style='font-size:14.0pt;line-height:115%'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Our goal was
 to take a series of reasonable decisions as we go forward but be willing to retract
-those decisions if needed.<span style='mso-spacerun:yes'>  </span>Luckily we
+those decisions if needed. Luckily we
 did not have to make many backtracking decisions.<span
 style='mso-spacerun:yes'>  </span>Our major decisions are described below:<o:p></o:p></span></p>
 
@@ -1315,7 +1315,7 @@ of the ML algorithm (Caret, Random Forest)</span></a><span style='font-size:
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Since it was
 a classification problem involving 5 categories, a decision tree was a natural
-choice.<span style='mso-spacerun:yes'>  </span>We decided to use carets random
+choice. We decided to use carets random
 forest method. An alternative (RPART) is inferior to random forest especially
 when problem complexity is not known in advance.<span
 style='mso-spacerun:yes'>  </span>We decided against any NN or SVM methods
@@ -1339,7 +1339,7 @@ style='font-size:14.0pt;line-height:115%'>tbl_df</span></span></span></span><spa
 style='mso-bookmark:_Toc414656857'><span class=Heading3Char><span
 style='font-size:14.0pt;line-height:115%'> right after reading</span></span></span><span
 style='mso-bookmark:_Toc414656857'></span><span style='font-size:14.0pt;
-line-height:115%'>:<span style='mso-spacerun:yes'>  </span>Mainly done for easy
+line-height:115%'>: Mainly done for easy
 human handling.<o:p></o:p></span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l0 level1 lfo1'><a
@@ -1348,13 +1348,13 @@ line-height:115%;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'><
 style='mso-list:Ignore'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span class=Heading3Char> Removal of computed Statistical Summary Variables</span></span></a><span
 style='mso-bookmark:_Toc414656858'></span><span style='font-size:14.0pt;
-line-height:115%'>:<span style='mso-spacerun:yes'>  </span>We removed all
+line-height:115%'>: We removed all
 columns that matched &quot;^max|^min|^amplitude|^<span class=SpellE>var</span>|^<span
 class=SpellE>avg</span>|^<span class=SpellE>stddev</span>|^<span class=SpellE>skewness</span>|^kurtosis&quot;.<span
 style='mso-spacerun:yes'>  </span>Statistical summaries may be useful in
 certain learning situations but mostly not.<span style='mso-spacerun:yes'> 
 </span>We could have brought back some of these columns but it never turned out
-to be necessary.<span style='mso-spacerun:yes'>  </span>Max, min, and amplitude
+to be necessary. Max, min, and amplitude
 were three variables that we considered keeping but decided not to. (159 cols
 reduced to 59)<o:p></o:p></span></p>
 
@@ -1377,14 +1377,14 @@ line-height:115%;mso-bidi-font-family:Calibri;mso-bidi-theme-font:minor-latin'><
 style='mso-list:Ignore'>4.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
 </span></span></span><![endif]><span class=Heading3Char> Correlation-based feature removal</span></span></a><span
 style='mso-bookmark:_Toc414656860'></span><span style='font-size:14.0pt;
-line-height:115%'>:<span style='mso-spacerun:yes'>  </span>After setting aside
+line-height:115%'>: After setting aside
 a test data set (discussed later), we performed a correlation experiment.<span
 style='mso-spacerun:yes'>  </span>If two variables had a <span class=GramE><i
 style='mso-bidi-font-style:normal'>abs(</i></span><i style='mso-bidi-font-style:
 normal'>correlation)</i> of 0.8 or more, we removed one of those randomly.<span
 style='mso-spacerun:yes'>  </span>This process continued in a transitive
 fashion (in a chain of correlated variables X, Y, Z… only Z might
-survive).<span style='mso-spacerun:yes'>  </span>This step was common to all
+survive). This step was common to all
 runs and was done only once.(59 columns reduced to 46)<o:p></o:p></span></p>
 
 <p class=MsoListParagraphCxSpMiddle style='text-indent:-.25in;mso-list:l0 level1 lfo1'><a
@@ -1401,7 +1401,7 @@ style='mso-spacerun:yes'>  </span>So if a variable had slopes (0.001, 0.007,
 -0.001<span class=GramE>..)</span> in the PCs, it would be a candidate to be
 removed but a variable of slopes (50, 100, and -100) will not be.<span
 style='mso-spacerun:yes'>  </span>We did not pursue this path due to the risk
-involved.<span style='mso-spacerun:yes'>  </span>But a visual inspection showed
+involved. But a visual inspection showed
 the promise of this approach.<o:p></o:p></span></p>
 
 <p class=MsoListParagraphCxSpLast style='text-indent:-.25in;mso-list:l0 level1 lfo1'><a
@@ -1413,12 +1413,12 @@ class=Heading3Char><span style='font-size:14.0pt;line-height:115%'><span
 style='mso-spacerun:yes'>  </span></span></span><span style='font-size:14.0pt;
 line-height:115%'>Only using the training set data points we did a quick
 experiment of generating 10 different random forests with a ten small random
-training sets (300 rows each).<span style='mso-spacerun:yes'>  </span>We
+training sets (300 rows each). We
 calculated the role played by each variable ($<span class=SpellE>fit$<span
 class=GramE>finalModel</span></span><span class=GramE>[</span>&quot;importance&quot;]
 ) in these random forests and the in-sample accuracy of the forest. We rejected
 25% of the variables that played least roles in these quick and dirty
-forests.<span style='mso-spacerun:yes'>  </span>This step was also done only
+forests. This step was also done only
 once. (46 columns reduced to 35)<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Our main
@@ -1433,17 +1433,17 @@ line-height:115%'><o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>This data
 set had enough data to finish the learning task without any severe rationing of
-data.<span style='mso-spacerun:yes'>  </span>So there was no need to utilize an
+data. So there was no need to utilize an
 extensively sophisticated CV technique.<span style='mso-spacerun:yes'> 
 </span>We, however, took extreme care that the test sets were completely
-isolated from the training sets.<span style='mso-spacerun:yes'>  </span>Here is
+isolated from the training sets. Here is
 what was done:<o:p></o:p></span></p>
 
 <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span
 style='font-size:14.0pt;line-height:115%'>Test Set 1: Completely isolated 30%
 Test Subset</span></b><span style='font-size:14.0pt;line-height:115%'>:<span
 style='mso-spacerun:yes'>   </span>A 30% random subset of the data was left out
-and was used only for testing.<span style='mso-spacerun:yes'>  </span>Every model
+and was used only for testing. Every model
 generated was tested on this data set.<span style='mso-spacerun:yes'> 
 </span>This allowed us to compare different learning scenarios on exact same
 test-data.<o:p></o:p></span></p>
@@ -1453,12 +1453,12 @@ style='font-size:14.0pt;line-height:115%'>Test Set 2:<span
 style='mso-spacerun:yes'>  </span>Random test-subsets for each experiment:<span
 style='mso-spacerun:yes'>  </span></span></b><span style='font-size:14.0pt;
 line-height:115%'>The remaining 70% of the data was used for training and
-testing.<span style='mso-spacerun:yes'>  </span>If an experiment needs N
+testing. If an experiment needs N
 training data points, we picked N random data points to the experiment to be
-used for training.<span style='mso-spacerun:yes'>  </span>But we also opportunistically
+used for training. But we also opportunistically
 used the remaining 70%-N points to formulate yet another test set.<span
 style='mso-spacerun:yes'>  </span>This latter set was also NOT used for
-training.<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+training. <o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>Due to ample
 availability of the data we never had to use methods like k-fold cross
@@ -1476,7 +1476,7 @@ src="Writeup_files/image004.jpg" v:shapes="Picture_x0020_4"><![endif]></span></h
 of results</span></a><span style='font-size:14.0pt;line-height:115%'><o:p></o:p></span></h2>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'>We used our last
-(and best) model for this analysis.<span style='mso-spacerun:yes'>  </span>Here
+(and best) model for this analysis. Here
 are some pertinent details:<o:p></o:p></span></p>
 
 <table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0
@@ -1501,7 +1501,7 @@ are some pertinent details:<o:p></o:p></span></p>
   padding:0in 5.4pt 0in 5.4pt'>
   <p class=MsoNormal style='margin-bottom:0in;margin-bottom:.0001pt;line-height:
   normal'><span style='font-size:14.0pt'>Training Set <span
-  style='mso-spacerun:yes'> </span>Size<span style='mso-spacerun:yes'>  </span><o:p></o:p></span></p>
+  style='mso-spacerun:yes'> </span>Size <o:p></o:p></span></p>
   </td>
   <td width=223 valign=top style='width:167.4pt;border-top:none;border-left:
   none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
@@ -1600,7 +1600,7 @@ style='font-size:14.0pt;line-height:115%'><o:p></o:p></span></h2>
 see how much did the removal of correlated columns help.<span
 style='mso-spacerun:yes'>  </span>The following graphs show the learning
 accuracy and training times as a result of training set size for the two
-cases.<span style='mso-spacerun:yes'>  </span>Removing the correlated variables
+cases. Removing the correlated variables
 improved the accuracy only marginally but improved the learning time quite significantly.<o:p></o:p></span></p>
 
 <p class=MsoNormal><span style='font-size:14.0pt;line-height:115%'><o:p>&nbsp;</o:p></span></p>
