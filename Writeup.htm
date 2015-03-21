@@ -1143,8 +1143,7 @@ Feb-March, 2015<o:p></o:p></span></p>
  style='mso-element:field-end'></span></span><![endif]--></a></span></span><span
  style='font-size:14.0pt;line-height:115%;mso-fareast-font-family:"Times New Roman";
  mso-fareast-theme-font:minor-fareast;mso-no-proof:yes'><o:p></o:p></span></p>
- <p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc414656863">Cross-validation
- Issue<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
+ <p class=MsoToc2><span class=MsoHyperlink><a href="#_Toc414656863">Cross-validation and Out-of-sample Error<span style='color:windowtext;display:none;mso-hide:screen;text-decoration:
  none;text-underline:none'><span style='mso-tab-count:1 dotted'>. </span></span><!--[if supportFields]><span
  style='color:windowtext;display:none;mso-hide:screen;text-decoration:none;
  text-underline:none'><span style='mso-element:field-begin'></span></span><span
@@ -1394,11 +1393,23 @@ experiment used a data set with 35 columns.<o:p></o:p></span></p>
 <p class=MsoNormal> <o:p>&nbsp;</o:p></span></p>
 
 <p class=MsoNormal><a name="_Toc414656863"><span class=Heading2Char><span
-style='font-size:14.0pt;line-height:115%'>Cross-validation Issue</span></span></a><span
+style='font-size:14.0pt;line-height:115%'>Cross-validation and Out-of-sample Error</span></span></a><span
 style='mso-bookmark:_Toc414656863'></span><span style='font-size:14.0pt;
 line-height:115%'><o:p></o:p></span></p>
 
-<p class=MsoNormal> This data
+<p class=MsoNormal> In any machine learning experiment out-of-sample
+(OOS) error is likely to be more than in-sample error (except when the
+concept is completely learnable in which case OOS may be same as the
+in-sample error).  As also indicated in the table below, in our
+experiment our final model had a 0 in-sample mean squared error (MSE).
+The OOS MSE was a tiny 0.002033.  In our first few models (generated
+with very small training sets) both in-sample and out-of-sample errors
+were larger with OOS being bigger than In-sample.
+</p>
+<p class=MsoNormal> 
+
+
+This data
 set had enough data to finish the learning task without any severe rationing of
 data. So there was no need to utilize an
 extensively sophisticated CV technique. We, however, took extreme care that the test sets were completely
